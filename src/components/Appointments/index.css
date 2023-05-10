@@ -1,0 +1,113 @@
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  height: 100vh;
+  font-family: 'Roboto';
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.data-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.data-container {
+  min-width: 40vw;
+}
+.heading {
+  color: #171f46;
+  font-size: 50px;
+}
+.label-styles {
+  color: #b5b7c4;
+  font-size: 18px;
+  font-weight: 600;
+}
+.input-styles {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #171f46;
+  width: 90%;
+}
+.btn {
+  background-color: #8b5cf6;
+  border: 0px;
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+.horizontal-rule {
+  width: 100%;
+  font-size: 2px;
+  color: #b5b7c4;
+  margin-top: 20px;
+}
+.star-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.star-btn {
+  background-color: #ffffff;
+  color: #9897f0;
+  border: #9897f0 1px solid;
+  border-radius: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+  outline: none;
+}
+.active-star-btn {
+  background-color: #9897f0;
+  color: #ffffff;
+  border: #9897f0 1px solid;
+  border-radius: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+  outline: none;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.comments-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .img-container {
+    display: none;
+  }
+  .bg-container {
+    height: auto;
+    padding: 20px;
+  }
+  .heading {
+    font-size: 24px;
+  }
+  .card-container {
+    padding: 20px;
+  }
+}
