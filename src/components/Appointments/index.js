@@ -1,6 +1,5 @@
 import {Component} from 'react'
 import {v4 as uuidv4} from 'uuid'
-import {format} from 'date-fns'
 import AppointmentItem from '../AppointmentItem'
 import './index.css'
 
@@ -20,7 +19,7 @@ class Appointments extends Component {
         id: uuidv4(),
         title,
         isStarred: false,
-        time: format(new Date(date), 'dd MMMM yyyy, EEEE'),
+        date,
       }
       this.setState(prevState => ({
         appointmentsList: [...prevState.appointmentsList, newAppointment],
@@ -74,7 +73,7 @@ class Appointments extends Component {
                 <input
                   value={title}
                   className="input-styles"
-                  name="Your Title"
+                  id="Your Title"
                   placeholder="Title"
                   type="text"
                   onChange={this.onTitleChange}
@@ -89,11 +88,11 @@ class Appointments extends Component {
                   className="input-styles"
                   placeholder="Your Comment"
                   type="date"
-                  name="Date"
+                  id="Date"
                   onChange={this.onDateChange}
                 />
                 <br />
-                <button type="submit" className="btn" data-testid="star">
+                <button type="submit" className="btn">
                   Add
                 </button>
               </form>

@@ -1,8 +1,10 @@
+import {format} from 'date-fns'
 import './index.css'
 
 const AppointmentItem = props => {
   const {eachAppointment, onStarButtonClicked} = props
-  const {id, isStarred, title, time} = eachAppointment
+  const {id, isStarred, title, date} = eachAppointment
+  const time = format(new Date(date), 'dd MMMM yyyy, EEEE')
   const onLike = () => {
     onStarButtonClicked(id)
   }
